@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Histórica de Ciudades Colombianas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Función para cargar el contenido de Barranquilla dinámicamente
+        function cargarBarranquilla() {
+            return fetch('barranquilla.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Insertar el HTML de Barranquilla antes del cierre del body
+                    document.body.insertAdjacentHTML('beforeend', html);
+                    
+                    // Inicializar las funciones de Barranquilla
+                    inicializarBarranquilla();
+                    
+                    console.log("Barranquilla cargada correctamente");
+                })
+                .catch(error => {
+                    console.error("Error al cargar Barranquilla:", error);
+                });
+        }
+        </script>
+</head>
+<body>
+    <!-- Página principal -->
+    <div id="home-page">
+        <header>
+            <div class="logo">
+                <a href="#" onclick="volverInicio(); return false;">
+                    <img src="img/Logo.png" alt="Logo Urbania">
+                </a>
+            </div>
+        </header>
+        <div class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/Collage.png') center/cover;">
+            <h2>Evolución Histórica de Ciudades Colombianas</h2>
+            <p>Un recorrido visual por la transformación arquitectónica y cultural de cuatro emblemáticas ciudades de Colombia</p>
+        </div>
+        
+        <section>
+            <h3>Nuestro Patrimonio Urbano</h3>
+            <p>Explora el patrimonio urbano de Colombia a través de su arquitectura y evolución cultural a lo largo del tiempo en estas importantes ciudades colombianas. Cada una con su propia historia y carácter único, representan la diversidad cultural y el rico patrimonio de nuestro país.</p>
+            
+            <div class="ciudad-selector">
+                <h3>Selecciona una Ciudad</h3>
+                <div class="ciudades-grid">
+                    <div class="ciudad-card">
+                        <div class="ciudad-img" style="background-image: url('https://2182029.fs1.hubspotusercontent-na1.net/hubfs/2182029/Centro%20de%20la%20ciudad%20-%20El%20centro%20de%20Bogot%C3%A1-Bogot%C3%A1%20de%20noche.jpg');"></div>
+                        <div class="ciudad-info">
+                            <h4>Bogotá</h4>
+                            <p>Capital de Colombia y centro histórico, político y cultural del país.</p>
+                            <a href="#" class="explorar-btn">
+                                <span>Explorar evolución</span> →
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="ciudad-card">
+                        <div class="ciudad-img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOaycc7BrUEGxPEA4HoWr4Nql-lSPi1HEKA&s)"></div>
+                        <div class="ciudad-info">
+                            <h4>Barranquilla</h4>
+                            <p>Puerto importante y ciudad de tradiciones festivas en el Caribe Colombiano.</p>
+                            <a href="#" class="explorar-btn">
+                                <span>Explorar evolución</span> →
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="ciudad-card">
+                        <div class="ciudad-img" style="background-image: url(https://media.traveler.es/photos/61376f8bd4923f67e298ef5b/master/w_1600%2Cc_limit/130738.jpg)"></div>
+                        <div class="ciudad-info">
+                            <h4>Popayán</h4>
+                            <p>La Ciudad Blanca, reconocida por su arquitectura colonial y Semana Santa.</p>
+                            <a href="#" class="explorar-btn">
+                                <span>Explorar evolución</span> →
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="ciudad-card">
+                        <div class="ciudad-img" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/30/Panor%C3%A1mica_de_San_Jos%C3%A9_de_C%C3%BAcuta%2C_Colombia.jpg)"></div>
+                        <div class="ciudad-info">
+                            <h4>Cúcuta</h4>
+                            <p>Ciudad fronteriza con importante papel histórico y comercial.</p>
+                            <a href="#" class="explorar-btn">
+                                <span>Explorar evolución</span> →
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="ciudad-card">
+                        <div class="ciudad-img" style="background-image: url(https://colombiatours.travel/wp-content/uploads/2018/12/medellin.jpg)"></div>
+                        <div class="ciudad-info">
+                            <h4>Medellín</h4>
+                            <p>La Ciudad de la Eterna Primavera, ejemplo de transformación urbana y social.</p>
+                            <a href="#" class="explorar-btn">
+                                <span>Explorar evolución</span> →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sobre-proyecto">
+            <h3>Archivos Multimedia</h3>
+            <p>
+                Explora nuestra colección y sumérjete en un viaje por el tiempo que revela las historias, desafíos y triunfos que han forjado la identidad de estas ciudades y de Colombia entera.
+                Preservar nuestro pasado es construir nuestro futuro.</p>
+            
+            <a href="#" class="explorar-historia" onclick="mostrarMultimedia(); return false;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                </svg>
+                Colección Multimedia
+            </a>
+        </section>
+        
+        <footer>
+            <div class="logo">
+                <img src="img/Logo.png" alt="Logo Urbania">
+                
+            </div>
+            <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+        </footer>
+    </div>
+    
+    <!-- Página de ciudad (Arquitectura) -->
+    <div id="ciudad-page">
+        <header>
+            <div class="logo">
+                <a href="#" onclick="volverInicio(); return false;">
+                    <img src="img/Logo.png" alt="Logo Urbania">
+                </a>
+            </div>
+        </header>
+        
+
+        <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://2182029.fs1.hubspotusercontent-na1.net/hubfs/2182029/Centro%20de%20la%20ciudad%20-%20El%20centro%20de%20Bogot%C3%A1-Bogot%C3%A1%20de%20noche.jpg') center/cover;">
+            
+            <div class="volver-link">
+                <button onclick="volverInicio(); return false;">
+                    ← Volver a ciudades
+                </button>
+            </div>
+
+            <h2>Bogotá</h2>
+            <p>Capital de Colombia y centro histórico, político y cultural del país.</p>
+        </div>
+        
+        <div class="ciudad-content">
+            <h3>Historia de Bogotá</h3>
+            <p>Fundada en 1538 por Gonzalo Jiménez de Quesada, Bogotá ha sido el centro político y cultural de Colombia. Su historia refleja la transformación de un pequeño asentamiento a una metrópolis moderna que conserva su patrimonio histórico.</p>
+            
+            <div class="ciudad-tabs">
+                <div class="ciudad-tab active-tab" onclick="mostrarArquitectura()">Arquitectura y Urbanismo</div>
+                <div class="ciudad-tab" onclick="mostrarVestimenta()">Evolución de Vestimenta</div>
+            </div>
+            
+            <div id="arquitectura-content">
+                <h3>Transformación Arquitectónica y Urbana</h3>
+                
+                <div class="landmark">
+                    <h4>Plaza de Bolívar</h4>
+                    <div class="landmark-meta">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                        </svg>
+                        1900 vs 2023
+                    </div>
+                    <p>La Plaza de Bolívar ha experimentado cambios significativos que reflejan la evolución de Colombia como nación independiente.</p>
+                    <div class="before-after">
+                        <div class="time-img" style="background-image: url('https://www.usergioarboleda.edu.co/sergiointeractivo/wp-content/uploads/2015/11/Plaza-de-Bol%C3%ADvar-1939.jpg')">
+                            <div class="time-label">1900</div>
+                        </div>
+                        <div class="time-img" style="background-image: url('https://cdn.colombia.com/sdi/2013/11/27/plaza-de-bolivar-714091.jpg')">
+                            <div class="time-label">2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="landmark">
+                    <h4>Avenida Jiménez</h4>
+                    <div class="landmark-meta">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                        </svg>
+                        1950 vs 2022
+                    </div>
+                    <p>De río canalizado a eje peatonal, la Avenida Jiménez representa la evolución de la infraestructura urbana.</p>
+                    <div class="before-after">
+                        <div class="time-img" style="background-image: url('https://imagenes.eltiempo.com/files/og_thumbnail/uploads/2018/08/29/5b87362732060.jpeg')">
+                            <div class="time-label">1950</div>
+                        </div>
+                        <div class="time-img" style="background-image: url('https://scontent.feoh6-1.fna.fbcdn.net/v/t1.6435-9/161294958_2559097314384196_1335477426178065028_n.jpg?stp=dst-jpg_p600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=Mcd0FvkrnOYQ7kNvwEyeHyo&_nc_oc=AdlOYg2M0u9cgLFXljqSOnxw2Z9XHkZzTvNGaqlc3DaDTW08PJHXi-LZBUwdHHZHIbHo1AWhracQBlLZDQAv9z5c&_nc_zt=23&_nc_ht=scontent.feoh6-1.fna&_nc_gid=XPjX3CZ5kx3Wh74f00BMmg&oh=00_AfK6w_-qzjB70uI-EOKKNfxWKe-kIHje9Wjy6AGzahm6WA&oe=6847363F')">
+                            <div class="time-label">2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="logo">
+                <img src="img/Logo.png" alt="Logo Urbania">
+                
+            </div>
+            <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+        </footer>
+    </div>
+    
+    <!-- Página de vestimenta -->
+    <div id="vestimenta-page">
+        <header>
+            <div class="logo">
+                <a href="#" onclick="volverInicio(); return false;">
+                    <img src="img/Logo.png" alt="Logo Urbania">
+                </a>
+            </div>
+        </header>
+        
+        
+        
+        <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://2182029.fs1.hubspotusercontent-na1.net/hubfs/2182029/Centro%20de%20la%20ciudad%20-%20El%20centro%20de%20Bogot%C3%A1-Bogot%C3%A1%20de%20noche.jpg') center/cover;">
+            <h2>Bogotá</h2>
+            <p>Capital de Colombia y centro histórico, político y cultural del país.</p>
+        </div>
+        
+        <div class="ciudad-content">
+            <h3>Historia de Bogotá</h3>
+            <p>Fundada en 1538 por Gonzalo Jiménez de Quesada, Bogotá ha sido el centro político y cultural de Colombia. Su historia refleja la transformación de un pequeño asentamiento a una metrópolis moderna que conserva su patrimonio histórico.</p>
+            
+            <div class="ciudad-tabs">
+                <div class="ciudad-tab" onclick="mostrarArquitectura()">Arquitectura y Urbanismo</div>
+                <div class="ciudad-tab active-tab" onclick="mostrarVestimenta()">Evolución de Vestimenta</div>
+            </div>
+            
+            <div id="vestimenta-content">
+                <h3>Evolución de la Vestimenta</h3>
+                
+                <div class="vestimenta-grid">
+                    <div class="era-card">
+                        <div class="era-img" style="background-image: url('img/personaBO.jpeg');"></div>
+                        <div class="era-info">
+                            <h4>Era Colonial</h4>
+                            <div class="era-meta">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                </svg>
+                                Siglos XVI-XVIII
+                            </div>
+                            <p>Durante la época colonial, la vestimenta reflejaba las distinciones sociales y la influencia española.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card">
+                        <div class="era-img" style="background-image: url('img/personaBOG.png'); background-size: 80%; background-position: center 30%;"></div>
+                        <div class="era-info">
+                            <h4>Era Moderna</h4>
+                            <div class="era-meta">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                </svg>
+                                Siglo XXI
+                            </div>
+                            <p>La vestimenta contemporánea bogotana se caracteriza por una combinación práctica de prendas funcionales como chaquetas, camisetas y jeans. El clima de la ciudad hace que la ropa abrigada sea una constante esencial.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <footer>
+            <div class="logo">
+                <img src="img/Logo.png" alt="Logo Urbania">
+                
+            </div>
+            <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+        </footer>
+    </div>
+    
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM cargado completamente");
+            // Asegurarnos de que las páginas estén correctamente configuradas al inicio
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Agregar event listeners a todos los botones de ciudad
+            document.querySelectorAll('.ciudad-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mostrarCiudad();
+                });
+            });
+            
+            // Agregar event listeners a las pestañas
+            document.querySelectorAll('.ciudad-tab')[0].addEventListener('click', mostrarArquitectura);
+            document.querySelectorAll('.ciudad-tab')[1].addEventListener('click', mostrarVestimenta);
+            
+            // Agregar event listeners a los botones de volver
+            document.querySelectorAll('.volver-link, .inicio-btn').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    volverInicio();
+                });
+            });
+        });
+        
+        // Funciones para navegación
+        function mostrarCiudad() {
+            console.log("Mostrando ciudad");
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'block';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Asegurarse de que la pestaña de arquitectura está activa por defecto
+            document.querySelectorAll('.ciudad-tab').forEach(tab => {
+                tab.classList.remove('active-tab');
+            });
+            document.querySelectorAll('.ciudad-tab')[0].classList.add('active-tab');
+        }
+        
+        function mostrarArquitectura() {
+            console.log("Mostrando arquitectura");
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'block';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Actualizar clases activas en AMBAS páginas
+            const arquitecturaTabs = document.querySelectorAll('.ciudad-tab:nth-child(1)');
+            const vestimentaTabs = document.querySelectorAll('.ciudad-tab:nth-child(2)');
+            
+            arquitecturaTabs.forEach(tab => tab.classList.add('active-tab'));
+            vestimentaTabs.forEach(tab => tab.classList.remove('active-tab'));
+        }
+        
+        function mostrarVestimenta() {
+            console.log("Mostrando vestimenta");
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'block';
+            
+            // Actualizar clases activas en AMBAS páginas
+            const arquitecturaTabs = document.querySelectorAll('.ciudad-tab:nth-child(1)');
+            const vestimentaTabs = document.querySelectorAll('.ciudad-tab:nth-child(2)');
+            
+            arquitecturaTabs.forEach(tab => tab.classList.remove('active-tab'));
+            vestimentaTabs.forEach(tab => tab.classList.add('active-tab'));
+        }
+        
+        function volverInicio() {
+            console.log("Volviendo al inicio");
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Ocultar páginas de ciudades específicas
+            const barranquillaPage = document.getElementById('barranquilla-page');
+            const popayanPage = document.getElementById('popayan-page');
+            
+            if (barranquillaPage) barranquillaPage.style.display = 'none';
+            if (popayanPage) popayanPage.style.display = 'none';
+            
+            // Ocultar también las páginas antiguas de Barranquilla si existen
+            const barranquillaArq = document.getElementById('barranquilla-arquitectura-page');
+            const barranquillaVest = document.getElementById('barranquilla-vestimenta-page');
+            
+            if (barranquillaArq) barranquillaArq.style.display = 'none';
+            if (barranquillaVest) barranquillaVest.style.display = 'none';
+        }
+
+    </script>
+
+<script>    
+    // Script optimizado para la integración de Barranquilla
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM cargado completamente con integración de Barranquilla");
+        
+        // Eliminar la función original cargarBarranquilla() si existe y reemplazarla con nuestra implementación
+        window.cargarBarranquilla = function() {
+            console.log("Cargando Barranquilla");
+            
+            // Crear el contenedor para Barranquilla si no existe
+            if (!document.getElementById('barranquilla-page')) {
+                console.log("Creando contenedor para Barranquilla");
+                
+                // Crear el div para la página de Barranquilla
+                const barranquillaPage = document.createElement('div');
+                barranquillaPage.id = 'barranquilla-page';
+                barranquillaPage.style.position = 'absolute';
+                barranquillaPage.style.top = '0';
+                barranquillaPage.style.left = '0';
+                barranquillaPage.style.width = '100%';
+                barranquillaPage.style.backgroundColor = '#fff';
+                barranquillaPage.style.zIndex = '100';
+                barranquillaPage.style.display = 'none';
+                document.body.appendChild(barranquillaPage);
+                
+                // Insertar el HTML de Barranquilla directamente
+                barranquillaPage.innerHTML = `
+                    <header>
+                        <div class="logo">
+                            <a href="#" onclick="volverInicio(); return false;">
+                                <img src="img/Logo.png" alt="Logo Urbania">
+                            </a>
+                        </div>
+                    </header>
+                    
+                <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfOaycc7BrUEGxPEA4HoWr4Nql-lSPi1HEKA&s') center/cover;">
+                    <div class="volver-link">
+                        <button onclick="volverInicio(); return false;">
+                             ← Volver a ciudades
+                        </button>
+                    </div>
+                <h2>Barranquilla</h2>
+                <p>Puerto importante y ciudad de tradiciones festivas en el Caribe Colombiano.</p>
+                </div>
+    
+                    <div class="ciudad-content">
+                        <h3>Historia de Barranquilla</h3>
+                        <p>
+                            Conocida como La Puerta de Oro de Colombia, Barranquilla se desarrolló como un importante puerto comercial a fines del XIX. Su ubicación estratégica la convirtió en el centro de innovaciones, siendo la primera ciudad con servicio eléctrico y transporte público en Colombia.
+                        </p>
+    
+                        <div class="ciudad-tabs">
+                            <div class="ciudad-tab active-tab" data-tab="arquitectura">Arquitectura y Urbanismo</div>
+                            <div class="ciudad-tab" data-tab="vestimenta">Evolución de Vestimenta</div>
+                        </div>
+    
+                        <!-- Sección Arquitectura -->
+                        <div id="barranquilla-arquitectura-content">
+                            <h3>Transformación Arquitectónica y Urbana</h3>
+    
+                            <div class="landmark">
+                                <h4>Paseo Bolívar</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1940 vs 2021
+                                </div>
+                                <p>Una importante arteria urbana transformada de un camino colonial a una moderna avenida.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Camellonabello.jpg/500px-Camellonabello.jpg')">
+                                        <div class="time-label">1940</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGelWbpUdBvw3cJsP3Tm-ulApQum_xwS4Y_g&s')">
+                                        <div class="time-label">2021</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="landmark">
+                                <h4>Barrio El Prado</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1920 vs 2019
+                                </div>
+                                <p>Primer barrio planificado de lujo, muestra la evolución del urbanismo residencial del país.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/elheraldoco/ENVP2MF5J5DYRHLZUVT77KIAVQ.jpg')">
+                                        <div class="time-label">1920</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://www.metrocuadrado.com/sites/noticias-m2/files/styles/crop_770x383/public/field/image/001.jpg')">
+                                        <div class="time-label">2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Sección Vestimenta -->
+                        <div id="barranquilla-vestimenta-content" style="display: none;">
+                            <h3>Evolución de la Vestimenta</h3>
+                            <div class="vestimenta-grid">
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('https://carnavaldebarranquilla.org/wp-content/uploads/2022/05/F2E93585-E093-4F91-8163-97E90C43035D-922x1024.jpeg');background-position: center 30%;"></div>
+                                    <div class="era-info">
+                                        <h4>Vestido Antiguo del Carnaval de Barranquilla</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XX
+                                        </div>
+                                        <p>Los trajes tradicionales del Carnaval refleja una rica mezcla de influencias africanas, europeas y caribeñas.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Añadiendo segunda tarjeta de vestimenta para Barranquilla -->
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('https://carnavaldebarranquilla.org/wp-content/uploads/2024/07/entre-palmeras-1.jpeg');"></div>
+                                    <div class="era-info">
+                                        <h4>Vestido Actual del Carnaval de Barranquilla</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XXI
+                                        </div>
+                                        <p>Los trajes contemporáneos del Carnaval de Barranquilla son una explosión de creatividad que fusiona la herencia africana, europea y caribeña con nuevas tendencias y materiales, creando vestuarios vibrantes y diversos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <footer>
+                        <div class="logo">
+                            <img src="img/Logo.png" alt="Logo Urbania">
+                        
+                        </div>
+                        <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+                    </footer>
+                `;
+                
+                // Agregar event listeners a las pestañas de Barranquilla
+                const tabs = barranquillaPage.querySelectorAll('.ciudad-tab');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const tabType = this.getAttribute('data-tab');
+                        if (tabType === 'arquitectura') {
+                            mostrarBarranquillaArquitectura();
+                        } else if (tabType === 'vestimenta') {
+                            mostrarBarranquillaVestimenta();
+                        }
+                    });
+                });
+                
+                // Agregar event listener al botón de inicio
+                const inicioBtn = barranquillaPage.querySelector('.inicio-btn');
+                if (inicioBtn) {
+                    inicioBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        volverInicio();
+                    });
+                }
+                
+                console.log("Contenido de Barranquilla insertado");
+            }
+            
+            // Mostrar la página de Barranquilla y ocultar las demás
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Ocultar otras ciudades si existen
+            const popayanPage = document.getElementById('popayan-page');
+            const cucutaPage = document.getElementById('cucuta-page');
+            const medellinPage = document.getElementById('medellin-page');
+            
+            if (popayanPage) popayanPage.style.display = 'none';
+            if (cucutaPage) cucutaPage.style.display = 'none';
+            if (medellinPage) medellinPage.style.display = 'none';
+            
+            // Mostrar la página de Barranquilla
+            document.getElementById('barranquilla-page').style.display = 'block';
+            
+            // Asegurarse de que la sección de arquitectura esté activa por defecto
+            mostrarBarranquillaArquitectura();
+            
+            // Asegurarse de que el contenido esté correctamente posicionado
+            window.scrollTo(0, 0);
+            
+            console.log("Barranquilla mostrada correctamente");
+            return true;
+        };
+        
+        // Funciones para navegar por las secciones de Barranquilla
+        window.mostrarBarranquillaArquitectura = function() {
+            console.log("Mostrando arquitectura de Barranquilla");
+            
+            if (document.getElementById('barranquilla-arquitectura-content')) {
+                document.getElementById('barranquilla-arquitectura-content').style.display = 'block';
+            }
+            
+            if (document.getElementById('barranquilla-vestimenta-content')) {
+                document.getElementById('barranquilla-vestimenta-content').style.display = 'none';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#barranquilla-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.add('active-tab');
+                tabs[1].classList.remove('active-tab');
+            }
+        };
+        
+        window.mostrarBarranquillaVestimenta = function() {
+            console.log("Mostrando vestimenta de Barranquilla");
+            
+            if (document.getElementById('barranquilla-arquitectura-content')) {
+                document.getElementById('barranquilla-arquitectura-content').style.display = 'none';
+            }
+            
+            if (document.getElementById('barranquilla-vestimenta-content')) {
+                document.getElementById('barranquilla-vestimenta-content').style.display = 'block';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#barranquilla-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.remove('active-tab');
+                tabs[1].classList.add('active-tab');
+            }
+        };
+        
+        // Extender la función volverInicio para manejar la página de Barranquilla
+        const originalVolverInicio = window.volverInicio;
+        window.volverInicio = function() {
+            // Llamar a la función original si existe
+            if (typeof originalVolverInicio === 'function') {
+                originalVolverInicio();
+            } else {
+                // Fallback si la función original no existe
+                document.getElementById('home-page').style.display = 'block';
+                document.getElementById('ciudad-page').style.display = 'none';
+                document.getElementById('vestimenta-page').style.display = 'none';
+            }
+            
+            // Ocultar también la página de Barranquilla
+            const barranquillaPage = document.getElementById('barranquilla-page');
+            if (barranquillaPage) {
+                barranquillaPage.style.display = 'none';
+            }
+            
+            // Asegurarse de que la página vuelva al inicio
+            window.scrollTo(0, 0);
+        };
+        
+        // Encontrar la tarjeta de Barranquilla buscando por texto en lugar de posición
+        const ciudadCards = document.querySelectorAll('.ciudad-card');
+        ciudadCards.forEach(card => {
+            const heading = card.querySelector('h4');
+            if (heading && heading.textContent.includes('Barranquilla')) {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log("Clic en Barranquilla detectado");
+                    cargarBarranquilla();
+                });
+            }
+        });
+    });
+    </script>
+
+<script>    
+    // Script para la integración de Popayán
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM cargado completamente con integración de Popayán");
+        
+        // Función para cargar Popayán
+        window.cargarPopayan = function() {
+            console.log("Cargando Popayán");
+            
+            // Crear el contenedor para Popayán si no existe
+            if (!document.getElementById('popayan-page')) {
+                console.log("Creando contenedor para Popayán");
+                
+                // Crear el div para la página de Popayán
+                const popayanPage = document.createElement('div');
+                popayanPage.id = 'popayan-page';
+                popayanPage.style.position = 'absolute';
+                popayanPage.style.top = '0';
+                popayanPage.style.left = '0';
+                popayanPage.style.width = '100%';
+                popayanPage.style.backgroundColor = '#fff';
+                popayanPage.style.zIndex = '100';
+                popayanPage.style.display = 'none';
+                document.body.appendChild(popayanPage);
+                
+                // Insertar el HTML de Popayán directamente
+                popayanPage.innerHTML = `
+                    <header>
+                        <div class="logo">
+                            <a href="#" onclick="volverInicio(); return false;">
+                                <img src="img/Logo.png" alt="Logo Urbania">
+                            </a>
+                        </div>
+                    </header>
+    
+                    <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://media.traveler.es/photos/61376f8bd4923f67e298ef5b/master/w_1600%2Cc_limit/130738.jpg') center/cover;">
+                        <div class="volver-link">
+                                <button onclick="volverInicio(); return false;">
+                                    ← Volver a ciudades
+                                </button>
+                        </div>
+                        <h2>Popayán</h2>
+                        <p>La Ciudad Blanca, reconocida por su arquitectura colonial y Semana Santa.</p>
+                    </div>
+    
+                    <div class="ciudad-content">
+                        <h3>Historia de Popayán</h3>
+                        <p>
+                            Fundada en 1537, Popayán es conocida como La Ciudad Blanca por sus edificaciones coloniales inmaculadas. Ha sido un importante centro religioso, cultural y educativo, destacándose por su Semana Santa, declarada Patrimonio Cultural Inmaterial de la Humanidad.
+                        </p>
+    
+                        <div class="ciudad-tabs">
+                            <div class="ciudad-tab active-tab" data-tab="arquitectura">Arquitectura y Urbanismo</div>
+                            <div class="ciudad-tab" data-tab="vestimenta">Evolución de Vestimenta</div>
+                        </div>
+    
+                        <!-- Sección Arquitectura -->
+                        <div id="popayan-arquitectura-content">
+                            <h3>Transformación Arquitectónica y Urbana</h3>
+    
+                            <div class="landmark">
+                                <h4>Iglesia de San Francisco</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1765 vs 2022
+                                </div>
+                                <p>La catedral ha sido restaurada varias veces tras terremotos, manteniendo su esencia colonial.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://scontent.feoh6-1.fna.fbcdn.net/v/t39.30808-6/493039683_1233434372115827_6935909357422162954_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=07HYGtvbGGQQ7kNvwFmabjK&_nc_oc=AdmrAk6H0q7HaqTEh09vsftvmrInGb8YaM0Up_2rpLC34irGfIAnytVsYkntvrpwHx0qvzkGbpVKsw66HCfFvi9M&_nc_zt=23&_nc_ht=scontent.feoh6-1.fna&_nc_gid=UBnXlRrYY77f90SAEO_p1Q&oh=00_AfIJ8SpNGba-QpCwWL800vDN9uofGVEZHMg2xur3lYEgnw&oe=6832CBCD');background-size:90%;background-position: center 55%">
+                                        <div class="time-label">1765</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f9/Iglesia_San_Francisco_2.JPG');background-position: center 35%">
+                                        <div class="time-label">2022</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="landmark">
+                                <h4>Parque Caldas</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1940 vs 2021
+                                </div>
+                                <p>Centro histórico de la ciudad, refleja la evolución del espacio público manteniendo su esencia colonial.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://pbs.twimg.com/media/DN2SPlmU8AAAKyO.jpg');background-position: center 10%">
+                                        <div class="time-label">1940</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/1d/30/7a/parque-caldas.jpg?w=1200&h=-1&s=1');background-position: center 100%">
+                                        <div class="time-label">2021</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Sección Vestimenta -->
+                        <div id="popayan-vestimenta-content" style="display: none;">
+                            <h3>Evolución de la Vestimenta</h3>
+                            <div class="vestimenta-grid">
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/personaPO.png');background-size:70%;background-position: center 30%"></div>
+                                    <div class="era-info">
+                                        <h4>Vestimenta Colonial</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XVIII
+                                        </div>
+                                        <p>La sociedad payanesa colonial se caracterizó por una vestimenta que reflejaba la influencia española y las distinciones sociales.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/insta.png');"></div>
+                                    <div class="era-info">
+                                        <h4>Era Moderna</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XXI
+                                        </div>
+                                        <p>Los atuendos de los cargueros y participantes en las procesiones han mantenido tradiciones centenarias, conservando elementos históricos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <footer>
+                        <div class="logo">
+                            <img src="img/Logo.png" alt="Logo Urbania">
+                            
+                        </div>
+                        <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+                    </footer>
+                `;
+                
+                // Agregar event listeners a las pestañas de Popayán
+                const tabs = popayanPage.querySelectorAll('.ciudad-tab');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const tabType = this.getAttribute('data-tab');
+                        if (tabType === 'arquitectura') {
+                            mostrarPopayanArquitectura();
+                        } else if (tabType === 'vestimenta') {
+                            mostrarPopayanVestimenta();
+                        }
+                    });
+                });
+                
+                // Agregar event listener al botón de inicio
+                const inicioBtn = popayanPage.querySelector('.inicio-btn');
+                if (inicioBtn) {
+                    inicioBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        volverInicio();
+                    });
+                }
+                
+                console.log("Contenido de Popayán insertado");
+            }
+            
+            // Mostrar la página de Popayán y ocultar las demás
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Ocultar otras ciudades si existen
+            const barranquillaPage = document.getElementById('barranquilla-page');
+            const cucutaPage = document.getElementById('cucuta-page');
+            const medellinPage = document.getElementById('medellin-page');
+            
+            if (barranquillaPage) barranquillaPage.style.display = 'none';
+            if (cucutaPage) cucutaPage.style.display = 'none';
+            if (medellinPage) medellinPage.style.display = 'none';
+            
+            // Mostrar la página de Popayán
+            document.getElementById('popayan-page').style.display = 'block';
+            
+            // Asegurarse de que la sección de arquitectura esté activa por defecto
+            mostrarPopayanArquitectura();
+            
+            // Asegurarse de que el contenido esté correctamente posicionado
+            window.scrollTo(0, 0);
+            
+            console.log("Popayán mostrada correctamente");
+            return true;
+        };
+        
+        // Funciones para navegar por las secciones de Popayán
+        window.mostrarPopayanArquitectura = function() {
+            console.log("Mostrando arquitectura de Popayán");
+            
+            if (document.getElementById('popayan-arquitectura-content')) {
+                document.getElementById('popayan-arquitectura-content').style.display = 'block';
+            }
+            
+            if (document.getElementById('popayan-vestimenta-content')) {
+                document.getElementById('popayan-vestimenta-content').style.display = 'none';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#popayan-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.add('active-tab');
+                tabs[1].classList.remove('active-tab');
+            }
+        };
+        
+        window.mostrarPopayanVestimenta = function() {
+            console.log("Mostrando vestimenta de Popayán");
+            
+            if (document.getElementById('popayan-arquitectura-content')) {
+                document.getElementById('popayan-arquitectura-content').style.display = 'none';
+            }
+            
+            if (document.getElementById('popayan-vestimenta-content')) {
+                document.getElementById('popayan-vestimenta-content').style.display = 'block';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#popayan-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.remove('active-tab');
+                tabs[1].classList.add('active-tab');
+            }
+        };
+        
+        // Extender la función volverInicio para manejar la página de Popayán
+        const originalVolverInicio = window.volverInicio;
+        window.volverInicio = function() {
+            // Llamar a la función original si existe
+            if (typeof originalVolverInicio === 'function') {
+                originalVolverInicio();
+            } else {
+                // Fallback si la función original no existe
+                document.getElementById('home-page').style.display = 'block';
+                document.getElementById('ciudad-page').style.display = 'none';
+                document.getElementById('vestimenta-page').style.display = 'none';
+            }
+            
+            // Ocultar también la página de Popayán
+            const popayanPage = document.getElementById('popayan-page');
+            if (popayanPage) {
+                popayanPage.style.display = 'none';
+            }
+            
+            // Asegurarse de que la página vuelva al inicio
+            window.scrollTo(0, 0);
+        };
+        
+        // Encontrar la tarjeta de Popayán y asignar el evento
+        const ciudadCards = document.querySelectorAll('.ciudad-card');
+        ciudadCards.forEach(card => {
+            const heading = card.querySelector('h4');
+            if (heading && heading.textContent.trim() === 'Popayán') {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log("Clic en Popayán detectado");
+                    cargarPopayan();
+                });
+            }
+        });
+    });
+    </script>
+
+<script>    
+    // Script para la integración de Cúcuta
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM cargado completamente con integración de Cúcuta");
+        
+        // Función para cargar Cúcuta
+        window.cargarCucuta = function() {
+            console.log("Cargando Cúcuta");
+            
+            // Crear el contenedor para Cúcuta si no existe
+            if (!document.getElementById('cucuta-page')) {
+                console.log("Creando contenedor para Cúcuta");
+                
+                // Crear el div para la página de Cúcuta
+                const cucutaPage = document.createElement('div');
+                cucutaPage.id = 'cucuta-page';
+                cucutaPage.style.position = 'absolute';
+                cucutaPage.style.top = '0';
+                cucutaPage.style.left = '0';
+                cucutaPage.style.width = '100%';
+                cucutaPage.style.backgroundColor = '#fff';
+                cucutaPage.style.zIndex = '100';
+                cucutaPage.style.display = 'none';
+                document.body.appendChild(cucutaPage);
+                
+                // Insertar el HTML de Cúcuta directamente
+                cucutaPage.innerHTML = `
+                    <header>
+                        <div class="logo">
+                            <a href="#" onclick="volverInicio(); return false;">
+                                <img src="img/Logo.png" alt="Logo Urbania">
+                            </a>
+                        </div>
+                    </header>
+    
+                    <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://upload.wikimedia.org/wikipedia/commons/3/30/Panor%C3%A1mica_de_San_Jos%C3%A9_de_C%C3%BAcuta%2C_Colombia.jpg') center/cover;">
+                        <div class="volver-link">
+                            <button onclick="volverInicio(); return false;">
+                                ← Volver a ciudades
+                            </button>
+                        </div>
+                         <h2>Cúcuta</h2>
+                         <p>Ciudad fronteriza con importante papel histórico y comercial.</p>
+                    </div>
+    
+                    <div class="ciudad-content">
+                        <h3>Historia de Cúcuta</h3>
+                        <p>
+                            Fundada en 1733, San José de Cúcuta ha sido un punto estratégico en la frontera con Venezuela. Fue escenario del histórico Congreso de 1821 donde se firmó la Constitución de la Gran Colombia. Su desarrollo ha estado marcado por el comercio fronterizo y la resiliencia tras el terremoto de 1875 que la reconstruyó con un moderno trazado urbano.
+                        </p>
+    
+                        <div class="ciudad-tabs">
+                            <div class="ciudad-tab active-tab" data-tab="arquitectura">Arquitectura y Urbanismo</div>
+                            <div class="ciudad-tab" data-tab="vestimenta">Evolución de Vestimenta</div>
+                        </div>
+    
+                        <!-- Sección Arquitectura -->
+                        <div id="cucuta-arquitectura-content">
+                            <h3>Transformación Arquitectónica y Urbana</h3>
+    
+                            <div class="landmark">
+                                <h4>Catedral de San José</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1920 vs 2022
+                                </div>
+                                <p>Centro histórico de la ciudad, ha evolucionado manteniendo su importancia como núcleo urbano.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/SANJOSE1.jpg/250px-SANJOSE1.jpg');background-size: 85%">
+                                        <div class="time-label">1920</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://diocesisdecucuta.com/wp-content/uploads/2023/09/San-Jose-catedral.jpg');background-position: center 50%">
+                                        <div class="time-label">2022</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="landmark">
+                                <h4>Templo Histórico de Villa del Rosario</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1950 vs 2021
+                                </div>
+                                <p>Principal arteria comercial de la ciudad, refleja la evolución del comercio y la vida urbana.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://scontent.feoh6-1.fna.fbcdn.net/v/t1.6435-9/127112224_2554895618141849_1390595786051990883_n.png?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Sm2SihsQsLoQ7kNvwH2LA5i&_nc_oc=AdmSKUe9zA7AvJP8buLQLxBCvYXvpk6NHBKlKOqU7OARb0zNR18gsRDQf__eU93OKxli41w3WVGMzGJHSrWiyd8B&_nc_zt=23&_nc_ht=scontent.feoh6-1.fna&_nc_gid=HFQZOOGnSgJXrXxzM5bTeA&oh=00_AfLrFJ53P4F11zKZmzxzp3XbNSBXMCtoneexGtjF2ry-GA&oe=68545821');background-position: center 20%">
+                                        <div class="time-label">1950</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/7SOJZWKH6ZCKZMENYGXHDVVKSM.JPG')">
+                                        <div class="time-label">2021</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Sección Vestimenta -->
+                        <div id="cucuta-vestimenta-content" style="display: none;">
+                            <h3>Evolución de la Vestimenta</h3>
+                            <div class="vestimenta-grid">
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/personaCU.png');background-position: center 8%"></div>
+                                    <div class="era-info">
+                                        <h4>Vestimenta Tradicional</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XIX
+                                        </div>
+                                        <p>La vestimenta tradicional cucuteña refleja la mezcla de influencias andinas y venezolanas, adaptada al clima cálido de la región.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/felipe.png');background-size:70%;background-position: center 7%"></div>
+                                    <div class="era-info">
+                                        <h4>Moda Contemporánea</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XXI
+                                        </div>
+                                        <p>La moda actual en Cúcuta combina tendencias internacionales con adaptaciones al clima cálido y la influencia del intercambio cultural fronterizo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <footer>
+                        <div class="logo">
+                            <img src="img/Logo.png" alt="Logo Urbania">
+                            
+                        </div>
+                        <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+                    </footer>
+                `;
+                
+                // Agregar event listeners a las pestañas de Cúcuta
+                const tabs = cucutaPage.querySelectorAll('.ciudad-tab');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const tabType = this.getAttribute('data-tab');
+                        if (tabType === 'arquitectura') {
+                            mostrarCucutaArquitectura();
+                        } else if (tabType === 'vestimenta') {
+                            mostrarCucutaVestimenta();
+                        }
+                    });
+                });
+                
+                // Agregar event listener al botón de inicio
+                const inicioBtn = cucutaPage.querySelector('.inicio-btn');
+                if (inicioBtn) {
+                    inicioBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        volverInicio();
+                    });
+                }
+                
+                console.log("Contenido de Cúcuta insertado");
+            }
+            
+            // Mostrar la página de Cúcuta y ocultar las demás
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('ciudad-page').style.display = 'none';
+            document.getElementById('vestimenta-page').style.display = 'none';
+            
+            // Ocultar otras ciudades si existen
+            const barranquillaPage = document.getElementById('barranquilla-page');
+            const popayanPage = document.getElementById('popayan-page');
+            const medellinPage = document.getElementById('medellin-page');
+            
+            if (barranquillaPage) barranquillaPage.style.display = 'none';
+            if (popayanPage) popayanPage.style.display = 'none';
+            if (medellinPage) medellinPage.style.display = 'none';
+            
+            // Mostrar la página de Cúcuta
+            document.getElementById('cucuta-page').style.display = 'block';
+            
+            // Asegurarse de que la sección de arquitectura esté activa por defecto
+            mostrarCucutaArquitectura();
+            
+            // Asegurarse de que el contenido esté correctamente posicionado
+            window.scrollTo(0, 0);
+            
+            console.log("Cúcuta mostrada correctamente");
+            return true;
+        };
+        
+        // Funciones para navegar por las secciones de Cúcuta
+        window.mostrarCucutaArquitectura = function() {
+            console.log("Mostrando arquitectura de Cúcuta");
+            
+            if (document.getElementById('cucuta-arquitectura-content')) {
+                document.getElementById('cucuta-arquitectura-content').style.display = 'block';
+            }
+            
+            if (document.getElementById('cucuta-vestimenta-content')) {
+                document.getElementById('cucuta-vestimenta-content').style.display = 'none';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#cucuta-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.add('active-tab');
+                tabs[1].classList.remove('active-tab');
+            }
+        };
+        
+        window.mostrarCucutaVestimenta = function() {
+            console.log("Mostrando vestimenta de Cúcuta");
+            
+            if (document.getElementById('cucuta-arquitectura-content')) {
+                document.getElementById('cucuta-arquitectura-content').style.display = 'none';
+            }
+            
+            if (document.getElementById('cucuta-vestimenta-content')) {
+                document.getElementById('cucuta-vestimenta-content').style.display = 'block';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#cucuta-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.remove('active-tab');
+                tabs[1].classList.add('active-tab');
+            }
+        };
+        
+        // Extender la función volverInicio para manejar la página de Cúcuta
+        const originalVolverInicio = window.volverInicio;
+        window.volverInicio = function() {
+            // Llamar a la función original si existe
+            if (typeof originalVolverInicio === 'function') {
+                originalVolverInicio();
+            } else {
+                // Fallback si la función original no existe
+                document.getElementById('home-page').style.display = 'block';
+                document.getElementById('ciudad-page').style.display = 'none';
+                document.getElementById('vestimenta-page').style.display = 'none';
+            }
+            
+            // Ocultar también la página de Cúcuta
+            const cucutaPage = document.getElementById('cucuta-page');
+            if (cucutaPage) {
+                cucutaPage.style.display = 'none';
+            }
+            
+            // Asegurarse de que la página vuelva al inicio
+            window.scrollTo(0, 0);
+        };
+        
+        // Encontrar la tarjeta de Cúcuta y asignar el evento
+        const ciudadCards = document.querySelectorAll('.ciudad-card');
+        ciudadCards.forEach(card => {
+            const heading = card.querySelector('h4');
+            if (heading && heading.textContent.trim() === 'Cúcuta') {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log("Clic en Cúcuta detectado");
+                    cargarCucuta();
+                });
+            }
+        });
+    });
+    </script>
+
+<script>    
+    // Script para la integración de Medellín - Versión corregida
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM cargado completamente con integración de Medellín");
+        
+        // Función para cargar Medellín
+        window.cargarMedellin = function() {
+            console.log("Cargando Medellín");
+            
+            // Crear el contenedor para Medellín si no existe
+            if (!document.getElementById('medellin-page')) {
+                console.log("Creando contenedor para Medellín");
+                
+                // Crear el div para la página de Medellín
+                const medellinPage = document.createElement('div');
+                medellinPage.id = 'medellin-page';
+                medellinPage.style.position = 'absolute';
+                medellinPage.style.top = '0';
+                medellinPage.style.left = '0';
+                medellinPage.style.width = '100%';
+                medellinPage.style.backgroundColor = '#fff';
+                medellinPage.style.zIndex = '100';
+                medellinPage.style.display = 'none';
+                document.body.appendChild(medellinPage);
+                
+                // Insertar el HTML de Medellín directamente
+                medellinPage.innerHTML = `
+                    <header>
+                       <div class="logo">
+                            <a href="#" onclick="volverInicio(); return false;">
+                                <img src="img/Logo.png" alt="Logo Urbania">
+                            </a>
+                        </div>
+                    </header>
+    
+                   <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://colombiatours.travel/wp-content/uploads/2018/12/medellin.jpg') center/cover;">
+                    <div class="volver-link">
+                        <button onclick="volverInicio(); return false;">
+                            ← Volver a ciudades
+                        </button>
+                    </div>
+                        <h2>Medellín</h2>
+                        <p>La Ciudad de la Eterna Primavera, ejemplo de transformación urbana y social.</p>
+                    </div>
+    
+                    <div class="ciudad-content">
+                        <h3>Historia de Medellín</h3>
+                        <p>
+                            Fundada en 1616 en el Valle de Aburrá, Medellín evolucionó de un pequeño asentamiento a una moderna metrópolis. La ciudad ha experimentado una notable transformación urbana y social, convirtiéndose en un referente mundial de innovación y desarrollo sostenible.
+                        </p>
+    
+                        <div class="ciudad-tabs">
+                            <div class="ciudad-tab active-tab" data-tab="arquitectura">Arquitectura y Urbanismo</div>
+                            <div class="ciudad-tab" data-tab="vestimenta">Evolución de Vestimenta</div>
+                        </div>
+    
+                        <!-- Sección Arquitectura -->
+                        <div id="medellin-arquitectura-content">
+                            <h3>Transformación Arquitectónica y Urbana</h3>
+    
+                            <div class="landmark">
+                                <h4>Plaza Botero</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1945 vs 2019
+                                </div>
+                                <p>La transformación del Centro de Medellín representa el cambio social y urbano de Medellín. Una zona histórica renovada para el disfrute ciudadano.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('https://estaticos.elcolombiano.com/binrepository/1631x800/41c0/1380d800/none/11101/WNQY/whatsapp-image-2025-03-21-at-10-29-35-am-1_47476664_20250325111855.jpg')">
+                                        <div class="time-label">1945</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('https://media.istockphoto.com/id/874121182/es/foto/plaza-botero-y-medellin-centro-de-la-ciudad-al-atardecer-en-medell%C3%ADn-colombia.jpg?s=612x612&w=0&k=20&c=zFbhYPizGIw6Lz-gL1qsz7Cp37y5dm18sXoVxxcJCR8=')">
+                                        <div class="time-label">2019</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="landmark">
+                                <h4>El Poblado</h4>
+                                <div class="landmark-meta">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                    </svg>
+                                    1920 vs 2021
+                                </div>
+                                <p>Los espacios históricos emblemáticos de transformación social a través de la arquitectura y la educación.</p>
+                                <div class="before-after">
+                                    <div class="time-img" style="background-image: url('img/pobladoA.png'); background-size: 125%; background-position: right top 20%;">
+                                        <div class="time-label">1920</div>
+                                    </div>
+                                    <div class="time-img" style="background-image: url('img/pobladoD.png');background-size: 125%; background-position: right top 90%;">
+                                        <div class="time-label">2021</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Sección Vestimenta -->
+                        <div id="medellin-vestimenta-content" style="display: none;">
+                            <h3>Evolución de la Vestimenta</h3>
+                            <div class="vestimenta-grid">
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/personaME.png');"></div>
+                                    <div class="era-info">
+                                        <h4>Era Industrial</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XX
+                                        </div>
+                                        <p>Durante la industrialización, la moda en Medellín reflejaba la prosperidad económica y las influencias europeas en la élite social.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="era-card">
+                                    <div class="era-img" style="background-image: url('img/balvin.png');"></div>
+                                    <div class="era-info">
+                                        <h4>Capital de Moda</h4>
+                                        <div class="era-meta">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="currentColor"/>
+                                            </svg>
+                                            Siglo XXI
+                                        </div>
+                                        <p>Medellín se ha consolidado como referente de la moda latinoamericana, con tendencias urbanas que combinan innovación y tradición.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <footer>
+                        <div class="logo">
+                            <img src="img/Logo.png" alt="Logo Urbania">
+                            
+                        </div>
+                        <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+                    </footer>
+                `;
+                
+                // Agregar event listeners a las pestañas de Medellín
+                const tabs = medellinPage.querySelectorAll('.ciudad-tab');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const tabType = this.getAttribute('data-tab');
+                        if (tabType === 'arquitectura') {
+                            mostrarMedellinArquitectura();
+                        } else if (tabType === 'vestimenta') {
+                            mostrarMedellinVestimenta();
+                        }
+                    });
+                });
+                
+                // Agregar event listener al botón de inicio
+                const inicioBtn = medellinPage.querySelector('.inicio-btn');
+                if (inicioBtn) {
+                    inicioBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        volverInicio();
+                    });
+                }
+                
+                console.log("Contenido de Medellín insertado");
+            }
+            
+            // Ocultar todas las páginas primero
+            const pagesToHide = [
+                'home-page', 
+                'ciudad-page', 
+                'vestimenta-page', 
+                'barranquilla-page', 
+                'popayan-page', 
+                'cucuta-page',
+                'bogota-page' // Añadido para ocultar Bogotá si existe
+            ];
+            
+            pagesToHide.forEach(pageId => {
+                const page = document.getElementById(pageId);
+                if (page) {
+                    page.style.display = 'none';
+                }
+            });
+            
+            // Mostrar la página de Medellín
+            document.getElementById('medellin-page').style.display = 'block';
+            
+            // Asegurarse de que la sección de arquitectura esté activa por defecto
+            mostrarMedellinArquitectura();
+            
+            // Asegurarse de que el contenido esté correctamente posicionado
+            window.scrollTo(0, 0);
+            
+            console.log("Medellín mostrada correctamente");
+            return true;
+        };
+        
+        // Funciones para navegar por las secciones de Medellín
+        window.mostrarMedellinArquitectura = function() {
+            console.log("Mostrando arquitectura de Medellín");
+            
+            if (document.getElementById('medellin-arquitectura-content')) {
+                document.getElementById('medellin-arquitectura-content').style.display = 'block';
+            }
+            
+            if (document.getElementById('medellin-vestimenta-content')) {
+                document.getElementById('medellin-vestimenta-content').style.display = 'none';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#medellin-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.add('active-tab');
+                tabs[1].classList.remove('active-tab');
+            }
+        };
+        
+        window.mostrarMedellinVestimenta = function() {
+            console.log("Mostrando vestimenta de Medellín");
+            
+            if (document.getElementById('medellin-arquitectura-content')) {
+                document.getElementById('medellin-arquitectura-content').style.display = 'none';
+            }
+            
+            if (document.getElementById('medellin-vestimenta-content')) {
+                document.getElementById('medellin-vestimenta-content').style.display = 'block';
+            }
+            
+            // Actualizar pestañas activas
+            const tabs = document.querySelectorAll('#medellin-page .ciudad-tab');
+            if (tabs.length >= 2) {
+                tabs[0].classList.remove('active-tab');
+                tabs[1].classList.add('active-tab');
+            }
+        };
+        
+        // Extender la función volverInicio para manejar la página de Medellín
+        const originalVolverInicio = window.volverInicio;
+        window.volverInicio = function() {
+            // Llamar a la función original si existe
+            if (typeof originalVolverInicio === 'function') {
+                originalVolverInicio();
+            } else {
+                // Fallback si la función original no existe
+                document.getElementById('home-page').style.display = 'block';
+                document.getElementById('ciudad-page').style.display = 'none';
+                document.getElementById('vestimenta-page').style.display = 'none';
+            }
+            
+            // Ocultar también la página de Medellín
+            const medellinPage = document.getElementById('medellin-page');
+            if (medellinPage) {
+                medellinPage.style.display = 'none';
+            }
+            
+            // Asegurarse de que la página vuelva al inicio
+            window.scrollTo(0, 0);
+        };
+        
+        // Asegurarse de que la tarjeta de Medellín tenga el evento asignado correctamente
+        setTimeout(function() {
+            console.log("Buscando tarjeta de Medellín para asignar evento...");
+            const ciudadCards = document.querySelectorAll('.ciudad-card');
+            let medellinCardFound = false;
+            
+            ciudadCards.forEach(card => {
+                const heading = card.querySelector('h4');
+                if (heading && heading.textContent.trim() === 'Medellín') {
+                    medellinCardFound = true;
+                    console.log("Tarjeta de Medellín encontrada");
+                    
+                    // Eliminar eventos anteriores para evitar duplicados
+                    const newCard = card.cloneNode(true);
+                    card.parentNode.replaceChild(newCard, card);
+                    
+                    // Asignar nuevo evento
+                    newCard.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log("Clic en Medellín detectado");
+                        cargarMedellin();
+                    });
+                    
+                    console.log("Evento de clic asignado a la tarjeta de Medellín");
+                }
+            });
+            
+            if (!medellinCardFound) {
+                console.log("ADVERTENCIA: No se encontró la tarjeta de Medellín");
+            }
+        }, 500);
+    });
+    </script>
+    
+<!-- Página de Multimedia -->
+<div id="multimedia-page" style="display: none;">
+    <header>
+        <div class="logo">
+            <a href="#" onclick="volverInicio(); return false;">
+                <img src="img/Logo.png" alt="Logo Urbania">
+            </a>
+        </div>
+    </header>
+
+    <div class="ciudad-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2000') center/cover;">
+        <div class="volver-link">
+            <button onclick="volverInicio(); return false;">
+                ← Volver al inicio
+            </button>
+        </div>
+        <h2>Multimedia</h2>
+        <p>Colección de contenido audiovisual y galería de GIFs</p>
+    </div>
+
+    <div class="ciudad-content">
+        <div class="multimedia-tabs">
+            <div class="ciudad-tab active-tab" onclick="mostrarAudiovisual()">Audiovisual</div>
+            <div class="ciudad-tab" onclick="mostrarGaleria()">Galería</div>
+        </div>
+
+        <div id="audiovisual-content">
+            <h3>Antes y Después de Comerciales</h3>
+            
+            <div class="multimedia-grid">
+                <div class="multimedia-item">
+                    <div class="multimedia-img" style="padding: 0; height: auto; overflow: hidden;">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/v=mo1kWLEzMF0&list=PLH4rDmtdNQuVLg4VRWzwQ_RE_nUTdhrdr&ab_channel=TOROPUBLICIDAD" title="Comercial Original" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="multimedia-info">
+                        <h4>Comercial Original</h4>
+                        <p>Versión inicial del comercial antes de la producción final.</p>
+                    </div>
+                </div>
+                
+                <div class="multimedia-item">
+                    <div class="multimedia-img" style="padding: 0; height: auto; overflow: hidden;">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/v=nR2U938QRHA" title="Comercial Original" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="multimedia-info">
+                        <h4>Comercial Original</h4>
+                        <p>Versión inicial del comercial antes de la producción final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="galeria-content" style="display: none;">
+            <h3>Galería de GIFs</h3>
+            
+            <div class="galeria-grid">
+                <!-- Aquí puedes agregar tus GIFs -->
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200" alt="GIF 1">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200" alt="GIF 2">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200" alt="GIF 3">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://via.placeholder.com/300x200" alt="GIF 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="img/Logo.png" alt="Logo Urbania">
+        </div>
+        <div class="copyright">© 2025 Urbania - Evolución Histórica de Ciudades Colombianas</div>
+    </footer>
+</div>
+
+<script>
+    // Funciones para la página multimedia
+    function mostrarMultimedia() {
+        console.log("Mostrando página multimedia");
+        document.getElementById('home-page').style.display = 'none';
+        document.getElementById('ciudad-page').style.display = 'none';
+        document.getElementById('vestimenta-page').style.display = 'none';
+        
+        // Ocultar otras páginas si existen
+        const barranquillaPage = document.getElementById('barranquilla-page');
+        const popayanPage = document.getElementById('popayan-page');
+        const cucutaPage = document.getElementById('cucuta-page');
+        const medellinPage = document.getElementById('medellin-page');
+        
+        if (barranquillaPage) barranquillaPage.style.display = 'none';
+        if (popayanPage) popayanPage.style.display = 'none';
+        if (cucutaPage) cucutaPage.style.display = 'none';
+        if (medellinPage) medellinPage.style.display = 'none';
+        
+        // Mostrar la página multimedia
+        document.getElementById('multimedia-page').style.display = 'block';
+        
+        // Asegurarse de que la sección audiovisual esté activa por defecto
+        mostrarAudiovisual();
+        
+        // Asegurarse de que el contenido esté correctamente posicionado
+        window.scrollTo(0, 0);
+    }
+    
+    function mostrarAudiovisual() {
+        document.getElementById('audiovisual-content').style.display = 'block';
+        document.getElementById('galeria-content').style.display = 'none';
+        
+        // Actualizar pestañas activas
+        const tabs = document.querySelectorAll('.multimedia-tabs .ciudad-tab');
+        tabs[0].classList.add('active-tab');
+        tabs[1].classList.remove('active-tab');
+    }
+    
+    function mostrarGaleria() {
+        document.getElementById('audiovisual-content').style.display = 'none';
+        document.getElementById('galeria-content').style.display = 'block';
+        
+        // Actualizar pestañas activas
+        const tabs = document.querySelectorAll('.multimedia-tabs .ciudad-tab');
+        tabs[0].classList.remove('active-tab');
+        tabs[1].classList.add('active-tab');
+    }
+    
+    // Extender la función volverInicio para incluir la página multimedia
+    const originalVolverInicioMultimedia = window.volverInicio;
+    window.volverInicio = function() {
+        // Llamar a la función original
+        if (typeof originalVolverInicioMultimedia === 'function') {
+            originalVolverInicioMultimedia();
+        }
+        
+        // Ocultar también la página multimedia
+        const multimediaPage = document.getElementById('multimedia-page');
+        if (multimediaPage) {
+            multimediaPage.style.display = 'none';
+        }
+    };
+</script>
+</body>
+</html>
+
+</body>
+</html>
